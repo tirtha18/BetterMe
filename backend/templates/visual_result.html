@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Search Result</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70%;
+            background-color: #ffcc00; /* Bright yellow background */
+            font-family: 'Bangers', cursive; /* Bold and crazy font */
+        }
+
+        .card {
+            width: 60%;
+            padding: 20px;
+            background-color: #ff6699; /* Pink background */
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            text-align: center; /* Center-align content */
+        }
+
+        .card-content h2 {
+            color: #6600cc; /* Purple heading */
+            font-size: 36px; /* Large font size */
+            margin-bottom: 20px; /* Some spacing below the heading */
+        }
+
+        .card-content p {
+            color: #ffffff; /* White text color */
+            font-size: 24px; /* Large font size */
+            margin-bottom: 10px; /* Some spacing between paragraphs */
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-content">
+            <h2>Calculated Calorie Intake of Your Dish</h2>
+            {% for i in response %}
+                <p>{{ i }}</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

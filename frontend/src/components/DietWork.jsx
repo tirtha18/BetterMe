@@ -108,7 +108,7 @@ export default function DietWork() {
           <input className="px-2 py-2 border-2 border-lightBlue rounded-lg w-[350px]" value={height} onChange={(e) => setHeight(e.target.value)} />
         </div>
         <div className="flex flex-col items-center">
-          <h1 className="text-xl text-lightBlue mb-2 font-semibold">Are you non veg or non-veg</h1>
+          <h1 className="text-xl text-lightBlue mb-2 font-semibold">Are you Veg or Non-veg</h1>
           <input className="px-2 py-2 border-2 border-lightBlue rounded-lg w-[350px]" value={dietType} onChange={(e) => setDietType(e.target.value)} />
         </div>
         <div className="flex flex-col items-center">

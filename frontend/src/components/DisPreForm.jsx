@@ -19,7 +19,7 @@ export default function DisPreForm() {
   const [showMessage, setShowMessage] = useState(false);
   const [messageContent, setMessageContent] = useState('');
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [medicines, setMedicines] = useState('');
+  const [medicines, setMedicines] = useState([]);
   const [disde, setDisde] = useState('');
   const [pre, setPre] = useState('');
   const [dis, setDis] = useState('');
@@ -28,10 +28,15 @@ export default function DisPreForm() {
     const response = await httpClient.post("//localhost:5000/predict", {symptoms : symptoms});
     console.log(response);
     const data = response.data;
-    setMedicines(data.nmjnmedications);
+    setMedicines(data.medications);
     setDisde(data.dis_des);
     setDis(data.predicted_disease);
-    setPre(data.my_precautions);
+    const p=''
+    for( let i=0;i<data.precautions.length;i++)
+    {
+       p+=data.precautions[i];
+    }
+    setPre(p);
     } catch (error){
       console.log(error);
     }
@@ -78,7 +83,7 @@ export default function DisPreForm() {
           Disease
         </button>
         <button onClick={() => handleClick(pre)} className="bg-lightBlue hover:scale-105 duration-150 text-white font-bold py-2 px-20 rounded-lg ml-8 shadow-lg text-[16px]">
-          Prediction
+          Precautions
         </button>
         <button onClick={() => handleClick(medicines)} className="bg-lightBlue hover:scale-105 duration-150 text-white font-bold py-2 px-20 rounded-lg mr-8 shadow-lg text-[16px]">
           Medicine

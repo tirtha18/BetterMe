@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Here to Know More</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            justify-content: center;
+            align-items: center;
+            height: 70%; /* Use 100vh for full viewport height */
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif; /* Specify a fallback font */
+        }
+
+        .card {
+            width: 80%;
+            max-width: 70%; /* Limit the maximum width for better readability */
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-content {
+            text-align: center;
+        }
+
+        h2 {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-content">
+            <h2>All You Need to Know</h2>
+            {%for i in results_text%}
+                
+                  <p>{{ i }}</p>    
+               
+            {%endfor%}
+        </div>
+    </div>
+</body>
+</html>

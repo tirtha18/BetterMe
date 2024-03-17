@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import PostCard from './PostCard';
 import httpclient from '../utils/httpclient';
+import { useNavigate } from 'react-router-dom';
+
 
 const CommunityPage = () => {
 
   const [posts, setPosts] = useState([]);
+  const navigate = useNavigate()
+
 
   const fetchPosts = async () => {
     try {
@@ -30,8 +34,9 @@ const CommunityPage = () => {
 
   return (
     <div className='community-page h-screen w-screen p-8'>
-      <h2 className='mx-4 mt-14 mb-16 font-poppins font-semibold text-2xl text-lightBlue'>Welcome to your daily feed!</h2>
+      <h2 className='mx-4 mt-14 mb-16 font-poppins font-semibold text-2xl text-lightBlue flex flex-col'>Welcome to your daily feed!</h2>
       <div className="container mx-4 grid grid-cols-3 gap-8">
+        
         {posts.map((post, index) => (
           <PostCard
             key={index}
@@ -40,7 +45,9 @@ const CommunityPage = () => {
             image={post.image_link ? post.image_link : ""}
           />
         ))}
+
       </div>
+      <button className="bg-lightBlue px-2 py-1 mt-8 rounded-lg text-white " onClick={() => { navigate('/community/post')}}>Create Post</button>
     </div>
   );
 };

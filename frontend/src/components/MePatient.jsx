@@ -93,7 +93,7 @@ export default function MePatient() {
                   Your Appointmens:
                 </div>
                 {appts.map((appt) => (
-                  <div className="w-full flex-col flex text-lightBlue space-y-3">
+                  <div className="w-full flex-col flex text-lightBlue space-y-3 mb-2">
                     <div className="flex flex-row items-center justify-between border-2 borderda border-lightBlue rounded-lg p-2 ">
                       <p className=" text-xl font-semibold border-dashed px-2 py-1">
                         {appt.doctor_name}
