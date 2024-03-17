@@ -3,7 +3,8 @@ import Logo from '../Images/Logo.png';
 import clinicphoto from '../Images/clinic_photo.jpg';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import httpClient from '../utils/httpClient';
+import httpclient from '../utils/httpclient'
+
 
 const LoginPage = () => {
   const [email, setEmail] = useState("")
@@ -13,7 +14,7 @@ const LoginPage = () => {
   const loginUser = async () => {
     console.log(email, password);
     try {
-      const response = await httpClient.post("//localhost:5000/login", {
+      const response = await httpclient.post("//localhost:5000/login", {
         email,
         password,
       })
