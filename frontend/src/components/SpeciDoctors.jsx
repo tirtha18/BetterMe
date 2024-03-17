@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import httpClient from '../utils/httpclient';
 import Avatar from '../Images/avatar.png';
+import { toast } from 'react-toastify';
 export default function SpeciDoctors(props) {
     const [doctors, setDoctors] = useState([]);
     useEffect(() => {
@@ -19,6 +20,7 @@ export default function SpeciDoctors(props) {
     const bookAppointment = async (doc_id) => {
         try{
             const response = await httpClient.post("//localhost:5000/bookappointment",{doctor_id: doc_id})
+            toast.success("Appointment Booked Succesfully!")
             console.log(response);
         } catch (error) {
             console.log(error);

@@ -7,8 +7,8 @@ const navigationLinksp = [
   { name: 'AI Coach', path: '/aicoach' },
   { name: 'Fitness', path: '/fitness' },
   { name: 'Appointments', path: '/doctors' },
-  { name: 'Community', path: '/community' },
-  { name: 'Dashboard', path: '/dashboardp' },
+  { name: 'Daily Feed', path: '/community' },
+  { name: 'Dashboard', path: '/dashboard' },
 ];
 const navigationLinksd =[
   { name: 'Home', path: '/' },

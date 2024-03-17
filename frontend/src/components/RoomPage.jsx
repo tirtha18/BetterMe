@@ -5,6 +5,7 @@ import {ZegoUIKitPrebuilt} from '@zegocloud/zego-uikit-prebuilt'
 const RoomPage = () => {
 
     const { roomId } = useParams()
+    console.log(roomId)
 
     const myMeeting = async (element) => {
         const appID = 188525620;
@@ -18,7 +19,7 @@ const RoomPage = () => {
             sharedLinks:[
                 {
                     name:'Copy Link',
-                    url: `http://localhost:3000/room/${roomId}`
+                    url: `http://localhost:3000/vcpage/room/${roomId}`
                 }
             ],
             scenario:{

@@ -22,6 +22,12 @@ import DisPreForm from './Components/DisPreForm';
 import DietWork from './Components/DietWork';
 import CalCountPage from './Components/CalCountPage';
 import Posture from './Components/Posture'
+import MePatient from './Components/MePatient';
+import VideoCallHome from './Components/VideoCallHome';
+import CommunityPage from './Components/CommunityPage';
+import CreatePost from './Components/CreatePost';
+
+
 function App() {
   return (
     <>
@@ -43,9 +49,14 @@ function App() {
           <Route exact path='/fitness/countcal' element={<CalCountPage/>} />
           <Route exact path='/fitness/posture' element={<Posture/>} />
           <Route exact path='/aicoach/diet' element={<DietWork />} />
+          <Route exact path='/dashboard' element={<MePatient />} />
           <Route exact path='/doctors/cardiologists' element={<SpeciDoctors specialization = "cardiologists"/>} />
           <Route exact path='/doctors/neurologists' element={<SpeciDoctors specialization = "neurologists"/>} />
           <Route exact path='/doctors/dermatologists' element={<SpeciDoctors specialization = "dermatologists"/>} />
+          <Route exact path='/vcpage' element={<VideoCallHome/>} />
+          <Route exact path='/vcpage/room/:roomId' element={<RoomPage/>} />
+          <Route exact path='/community' element={<CommunityPage/>} />
+          <Route exact path='/community/post' element={<CreatePost/>} />
         </Routes>
       </Router>
     </>
