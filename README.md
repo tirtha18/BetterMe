@@ -1,4 +1,4 @@
-#BetterME: Your Personalized Health Companion
+BetterME: Your Personalized Health Companion
 Overview
 
 BetterME is an innovative health application designed to offer personalized healthcare solutions using advanced machine learning and artificial intelligence techniques. The application provides detailed disease descriptions, precise medicine recommendations, precautionary measures, tailored health plans, and a suite of health monitoring tools. BetterME integrates visual search for calorie counting, posture correction features, and diagnostic tools for heart and lung diseases, all wrapped in a user-friendly web interface.
@@ -47,6 +47,7 @@ Frontend
 
 React.js: Utilized for building a dynamic and responsive user interface.
 Tailwind CSS: Employed for designing a modern and visually appealing frontend.
- Backend
- Flask: Implemented for handling appointment booking and feed features.
+
+Backend
+Flask: Implemented for handling appointment booking and feed features.
 
